@@ -4,23 +4,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        System.out.print("Type a year: ");
-        int year = Integer.parseInt(reader.nextLine());
+      //  System.out.print("Type a password: ");
+      //  String password = reader.nextLine();
 
-        boolean leapyear = false;
+        while (true) {
+            System.out.println("Type a password: ");
+            String password = reader.nextLine();
 
-        if ( year % 100 == 0) {
-            if (year % 400 == 0) {
-                leapyear = true;
+            if (password.equals("carrot")) {
+                System.out.println("Right!");
+                System.out.println("Secret message: qwerty");
+                break;
+            } else {
+                System.out.println("Wrong!");
             }
-        } else if (year % 4 == 0){
-            leapyear = true;
-        }
-
-        if (leapyear){
-            System.out.println("Entered year is a leap year.");
-        } else {
-            System.out.println("Entered year is not a leap year.");
         }
     }
 }
