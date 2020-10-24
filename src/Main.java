@@ -7,10 +7,10 @@ public class Main {
         System.out.print("Type a number: ");
         int number = Integer.parseInt(reader.nextLine());
 
-        if (number >= 0) {
-            System.out.println("The number is positive.");
+        if (number % 2 == 0 ) {
+            System.out.println("Number " + number + " is even.");
         } else {
-            System.out.println("The number is negative.");
+            System.out.println("The " + number + " is negative.");
         }
     }
 }
