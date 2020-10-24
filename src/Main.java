@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("Let's calculate the circumference of a circle.");
+        System.out.print("Type a number: ");
+        int number = Integer.parseInt(reader.nextLine());
 
-        System.out.print("Type a radius: ");
-        int radius = Integer.parseInt(reader.nextLine());
-
-        System.out.println("Circumference of the circle is: " + ( 2 * Math.PI * radius));
+        if (number >= 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is negative.");
+        }
     }
 }
