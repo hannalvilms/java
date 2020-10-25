@@ -5,12 +5,14 @@ public class Main {
         Scanner reader = new Scanner(System.in);
 
         int result = 0;
-        System.out.print("Sum until: ");
-        int number = Integer.parseInt(reader.nextLine());
-        int i = 1;
-        while (i <= number) {
-            result += i;
-            i++;
+        System.out.print("First number: ");
+        int firstNumber = Integer.parseInt(reader.nextLine());
+        System.out.print("Last number: ");
+        int lastNumber = Integer.parseInt(reader.nextLine());
+
+        while (firstNumber <= lastNumber) {
+            result += firstNumber;
+            firstNumber++;
         }
         System.out.println("Sum is: " + result);
     }
