@@ -5,15 +5,12 @@ public class Main {
         Scanner reader = new Scanner(System.in);
 
         int result = 0;
-        System.out.print("First number: ");
-        int firstNumber = Integer.parseInt(reader.nextLine());
-        System.out.print("Last number: ");
-        int lastNumber = Integer.parseInt(reader.nextLine());
-
-        while (firstNumber <= lastNumber) {
-            result += firstNumber;
-            firstNumber++;
+        System.out.print("Type a number: ");
+        int number = Integer.parseInt(reader.nextLine());
+        int i = 1;
+        while (result <= number) {
+            result += number;
         }
-        System.out.println("Sum is: " + result);
+        System.out.println("Factorial is: " + result);
     }
 }
