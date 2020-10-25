@@ -4,13 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        int result = 0;
-        System.out.print("Type a number: ");
+        System.out.print("Type numbers: ");
         int number = Integer.parseInt(reader.nextLine());
-        int i = 1;
-        while (result <= number) {
-            result += number;
+
+        while (number != -1) {
+            number = Integer.parseInt(reader.nextLine());
         }
-        System.out.println("Factorial is: " + result);
+        System.out.println("Thank you and see you later!");
     }
 }
