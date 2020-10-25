@@ -4,15 +4,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        int sum = 0;
+        int number = 100;
 
-        while (true) {
-            int read = Integer.parseInt(reader.nextLine());
-            if (read == 0) {
-                break;
-            }
-            System.out.println("Sum now: " + (sum+= read));
+        while (number > 0) {
+            System.out.println(number);
+            number--;
         }
-        System.out.println("Sum in the end: " + sum);
     }
 }
