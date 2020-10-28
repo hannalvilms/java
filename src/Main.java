@@ -1,31 +1,21 @@
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-        drawNumber();
+    Scanner reader = new Scanner(System.in);
+    public static double average(double number1, double number2, double number3, double number4) {
+        double numberAverage = (number1 + number2 + number3 + number4)/4;
+        return numberAverage;
     }
 
-    public static void drawNumber() {
-        int number = (int)(Math.random()*101) ;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Guess a number: ");
-
-        int guess = Integer.parseInt(input.nextLine());
-
-        int guesses = 1;
-
-        while (number != guess) {
-            if (guess < number) {
-                System.out.println("The number is greater, guesses made: " + guesses);
-            } else if (guess > number) {
-                System.out.println("The number is lesser, guesses made: " + guesses);
-            }
-            guesses++;
-            System.out.println("Guess a number: ");
-            guess = Integer.parseInt(input.nextLine());
-        }
-        System.out.println("Congratulations, your guess is correct!");
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter four numbers: ");
+        double numberOne = Integer.parseInt(reader.nextLine());
+        double numberTwo = Integer.parseInt(reader.nextLine());
+        double numberThree = Integer.parseInt(reader.nextLine());
+        double numberFour = Integer.parseInt(reader.nextLine());
+        double answer = average(numberOne, numberTwo, numberThree, numberFour);
+        System.out.println("Average: " + answer);
     }
 }
 
