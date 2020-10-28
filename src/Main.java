@@ -3,17 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println();
-        printSquare(4);
+        printRectangle(2,5);
     }
-    public static void printSquare(int sideSize) {
-        int i = 0;
-        while (i < sideSize) {
-            int j = 0;
-            while (j < sideSize) {
+    public static void printRectangle(int width, int height) {
+        int h = 0;
+        while (h < height) {
+            int w = 0;
+            while (w < width) {
                 System.out.println("*");
-                j++;
+                w++;
             }
-            i++;
+            h++;
             System.out.println();
         }
     }
