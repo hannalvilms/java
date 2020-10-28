@@ -2,16 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        printStars(5);
-        printStars(3);
-        printStars(9);
-    }
-    public static void printStars(int amount) {
-        int i = 0;
-        while (i < amount) {
-            System.out.println("*");
-            i++;
-        }
         System.out.println();
+        printSquare(4);
+    }
+    public static void printSquare(int sideSize) {
+        int i = 0;
+        while (i < sideSize) {
+            int j = 0;
+            while (j < sideSize) {
+                System.out.println("*");
+                j++;
+            }
+            i++;
+            System.out.println();
+        }
     }
 }
