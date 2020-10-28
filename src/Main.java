@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int calculateCharacters(String text) {
-        return text.length();
+    public static char firstCharacter(String text) {
+        char character = text.charAt(0);
+        return character;
     }
 
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
         System.out.print("Type your name: ");
         String yourName = reader.nextLine();
 
-        System.out.println("Number of characters: " + calculateCharacters(yourName));
+        System.out.println("First character: " + firstCharacter(yourName));
     }
 }
 
