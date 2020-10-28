@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    public static char firstCharacter(String text) {
-        char character = text.charAt(0);
-        return character;
+    public static char lastCharacter(String text) {
+        char lastChar = text.charAt(text.length() -1 );
+        return lastChar;
     }
 
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Main {
         System.out.print("Type your name: ");
         String yourName = reader.nextLine();
 
-        System.out.println("First character: " + firstCharacter(yourName));
+        System.out.println("Last character: " + lastCharacter(yourName));
     }
 }
 
