@@ -4,14 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.print("Type a word: ");
-        String word = reader.nextLine();
-        System.out.print("Length of the last part: ");
-        int length = Integer.parseInt(reader.nextLine());
+        System.out.print("Type the first word: ");
+        String firstWord = reader.nextLine();
+        System.out.print("Type the second word: ");
+        String secondWord = reader.nextLine();
 
-        String lastPart = word.substring(length);
+        int index = firstWord.indexOf(secondWord);
 
-        System.out.println("Result: " + lastPart);
+        if (index == 1) {
+            System.out.println("The word '" + secondWord + "' is found in the word '" + firstWord + "'");
+        } else {
+            System.out.println("The word '" + secondWord + "' is not found in the word '" + firstWord + "'");
+        }
+
+
 
     }
 }
