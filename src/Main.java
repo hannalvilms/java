@@ -1,23 +1,25 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
-    public static String reverse(String text) {
-        String reverseText = "";
-        int i = text.length()-1;
-        while (i >= 0){
-            char symbol = text.charAt(i);
-            reverseText += symbol;
-            i--;
-        }
-        return reverseText;
-    }
-
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.print("Type in your text: ");
-        String text = reader.nextLine();
-        System.out.println("In reverse order: " + reverse(text));
+        ArrayList<String> words = new ArrayList<String>();
+
+        while (true) {
+            System.out.println("Type a word: ");
+            String typeWord = reader.nextLine();
+            words.add(typeWord);
+
+            if (typeWord.isEmpty()) {
+                System.out.println("You typed the following words: ");
+                break;
+            }
+        }
+
+        for (String word : words) {
+            System.out.println( word );
+        }
     }
 }
 
