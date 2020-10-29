@@ -8,17 +8,13 @@ public class Main {
 
         while (true) {
             System.out.println("Type a word: ");
-            String typeWord = reader.nextLine();
-            words.add(typeWord);
+            String word = reader.nextLine();
 
-            if (typeWord.isEmpty()) {
-                System.out.println("You typed the following words: ");
+            if (words.contains(word)) {
+                System.out.println("You wrote the word '" + word + "' twice.");
                 break;
             }
-        }
-
-        for (String word : words) {
-            System.out.println( word );
+            words.add(word);
         }
     }
 }
