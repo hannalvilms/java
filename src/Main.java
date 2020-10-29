@@ -2,23 +2,35 @@ import java.util.*;
 
 public class Main {
 
-    public static ArrayList<Integer> lengths(ArrayList<String> list) {
-        ArrayList<Integer> lengthList = new ArrayList<Integer>();
-        for (String i : list) {
-            lengthList.add(i.length());
+    public static boolean moreThanOnce(ArrayList<Integer> list, int number) {
+        int count = 0;
+        for (int numberInList : list) {
+            if (numberInList == number) {
+                count = count +1;
+            }
+            if (count > 1) {
+                return true;
+            }
         }
-        return lengthList;
+        return false;
     }
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Hallo");
-        list.add("Moi");
-        list.add("Benvenuto!");
-        list.add("badger badger badger badger");
-        ArrayList<Integer> lengths = lengths(list);
+        Scanner reader = new Scanner(System.in);
 
-        System.out.println("The lengths of the Strings: " + lengths);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+
+        System.out.println("Type a number: ");
+        int number = Integer.parseInt(reader.nextLine());
+        if (moreThanOnce(list, number)) {
+            System.out.println(number + " appears more than once.");
+        } else {
+            System.out.println(number + " does not appear more than once.");
+        }
     }
 }
 
