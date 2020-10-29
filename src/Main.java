@@ -17,7 +17,7 @@ public class Main {
             }
         }
 
-        Collections.reverse(words);
+        Collections.sort(words);
         System.out.println("You typed the following words: ");
 
         for (String word : words) {
