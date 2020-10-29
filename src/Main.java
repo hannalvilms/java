@@ -2,27 +2,20 @@ import java.util.*;
 
 public class Main {
 
+    public static int countItems(ArrayList<String> list) {
+        return list.size();
+    }
+
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        ArrayList<String> words = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
 
-        while (true) {
-            System.out.println("Type a word: ");
-            String typeWord = reader.nextLine();
-            words.add(typeWord);
-            Collections.reverse(words);
+        list.add("Tere");
+        list.add("Ciao");
+        list.add("Hello");
 
-            if (typeWord.isEmpty()) {
-                break;
-            }
-        }
-
-        Collections.sort(words);
-        System.out.println("You typed the following words: ");
-
-        for (String word : words) {
-            System.out.println( word );
-        }
+        System.out.println("There are this many items in the list:");
+        System.out.println(countItems(list));
     }
 }
 
