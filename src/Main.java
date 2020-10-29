@@ -8,13 +8,20 @@ public class Main {
 
         while (true) {
             System.out.println("Type a word: ");
-            String word = reader.nextLine();
+            String typeWord = reader.nextLine();
+            words.add(typeWord);
+            Collections.reverse(words);
 
-            if (words.contains(word)) {
-                System.out.println("You wrote the word '" + word + "' twice.");
+            if (typeWord.isEmpty()) {
                 break;
             }
-            words.add(word);
+        }
+
+        Collections.reverse(words);
+        System.out.println("You typed the following words: ");
+
+        for (String word : words) {
+            System.out.println( word );
         }
     }
 }
