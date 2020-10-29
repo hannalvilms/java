@@ -2,27 +2,26 @@ import java.util.*;
 
 public class Main {
 
-    public static void removeLast(ArrayList<String> list){
-        int indexOfLast = list.size()-1;
-        list.remove(indexOfLast);
+    public static int sum(ArrayList<Integer> list) {
+        int sum = 0;
+        for (int number : list) {
+            sum = sum + number;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
 
-        list.add("Mati");
-        list.add("Kati");
-        list.add("Tõnu");
-        list.add("Liis");
+        System.out.println("The sum: " + sum(list));
 
-        System.out.println("Inimesed: ");
-        System.out.println(list);
+        list.add(10);
 
-        Collections.sort(list);
-        System.out.println(list);
-        removeLast(list);
-        System.out.println(list);
+        System.out.println("the sum: " + sum(list));
     }
 }
 
