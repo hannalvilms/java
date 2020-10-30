@@ -2,29 +2,36 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        LyyraCard Pekka = new LyyraCard(20);
-        LyyraCard Brian = new LyyraCard(30);
+    public static void main(String[] args) throws InterruptedException {
+        Scanner reader = new Scanner(System.in);
+        BoundedCounter seconds = new BoundedCounter(59);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
 
-        Pekka.payGourmet();
-        Brian.payEconomical();
+        System.out.print("seconds: ");
+        int s = Integer.parseInt(reader.nextLine()); // read the initial value of seconds from the user
+        System.out.print("minutes: ");
+        int m = Integer.parseInt(reader.nextLine());// read the initial value of minutes from the user
+        System.out.print("hours: ");
+        int h = Integer.parseInt(reader.nextLine());// read the initial value of hours from the user
 
-        System.out.println("Pekka: " + Pekka);
-        System.out.println("Brian: " + Brian);
+        seconds.setValue(s);
+        minutes.setValue(m);
+        hours.setValue(h);
 
-        Pekka.loadMoney(20);
-        Brian.payGourmet();
-
-        System.out.println("Pekka: " + Pekka);
-        System.out.println("Brian: " + Brian);
-
-        Pekka.payEconomical();
-        Pekka.payEconomical();
-        Brian.loadMoney(50);
-
-        System.out.println("Pekka: " + Pekka);
-        System.out.println("Brian: " + Brian);
-
+        while ( true ) {
+            System.out.println( hours + ":" + minutes + ":" + seconds );
+            Thread.sleep(1000);
+            // like in previous but seconds taken into account
+            seconds.next();
+            if(seconds.getValue() == 0){
+                minutes.next();
+                if(minutes.getValue() == 0){
+                    hours.next();
+                }
+            }
+            //i++;
+        }
     }
 }
 
