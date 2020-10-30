@@ -3,15 +3,28 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-            Menu menu = new Menu();
+        LyyraCard Pekka = new LyyraCard(20);
+        LyyraCard Brian = new LyyraCard(30);
 
-            menu.addMeal("hamburger");
-            menu.addMeal("hamburger");
-            menu.addMeal("fish n chips");
+        Pekka.payGourmet();
+        Brian.payEconomical();
 
-            menu.printMeals();
+        System.out.println("Pekka: " + Pekka);
+        System.out.println("Brian: " + Brian);
 
-            menu.clearMenu();
+        Pekka.loadMoney(20);
+        Brian.payGourmet();
+
+        System.out.println("Pekka: " + Pekka);
+        System.out.println("Brian: " + Brian);
+
+        Pekka.payEconomical();
+        Pekka.payEconomical();
+        Brian.loadMoney(50);
+
+        System.out.println("Pekka: " + Pekka);
+        System.out.println("Brian: " + Brian);
+
     }
 }
 
