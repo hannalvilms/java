@@ -3,21 +3,15 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-            DecreasingCounter counter = new DecreasingCounter(10);
+            Menu menu = new Menu();
 
-            counter.printValue();
+            menu.addMeal("hamburger");
+            menu.addMeal("hamburger");
+            menu.addMeal("fish n chips");
 
-            counter.decrease();
-            counter.printValue();
+            menu.printMeals();
 
-            counter.decrease();
-            counter.printValue();
-
-            counter.reset();
-            counter.printValue();
-
-            counter.setInitial();
-            counter.printValue();
+            menu.clearMenu();
     }
 }
 
