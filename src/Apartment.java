@@ -16,4 +16,10 @@ public class Apartment {
             return false;
         }
     }
+
+    public int priceDifference(Apartment otherApartment) {
+        int thisPrice = this.pricePerSquareMeter * this.squareMeters;
+        int otherPrice = otherApartment.pricePerSquareMeter * otherApartment.squareMeters;
+        return Math.abs(thisPrice-otherPrice);
+    }
 }
