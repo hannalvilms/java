@@ -5,11 +5,23 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        Student pekka = new Student("Pekka Mikkola", "013141590");
-        System.out.println("name: " + pekka.getName());
-        System.out.println("studentnumber: " + pekka.getStudentNumber());
-        System.out.println(pekka);
+        ArrayList<Student> students = new ArrayList<Student>();
+
+        while (true){
+            System.out.println("Name: ");
+            String name = reader.nextLine();
+            if (name.isEmpty()) {
+                break;
+            }
+            System.out.println("Stundentnumber: ");
+            String studentnumber = reader.nextLine();
+            students.add(new Student(name, studentnumber));
+            }
+        for (Student student: students) {
+            System.out.println(student);
+        }
     }
 }
+
 
 
