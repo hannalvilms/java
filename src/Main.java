@@ -5,30 +5,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        ArrayList<Student> students = new ArrayList<Student>();
+        Clock clock = new Clock(23, 59, 50);
 
-        while (true){
-            System.out.println("Name: ");
-            String name = reader.nextLine();
-            if (name.isEmpty()) {
-                break;
-            }
-            System.out.println("Stundentnumber: ");
-            String studentnumber = reader.nextLine();
-            students.add(new Student(name, studentnumber));
-            }
-        for (Student student: students) {
-            System.out.println(student);
-        }
-
-        System.out.println("Give search term: ");
-        String term = reader.nextLine();
-        System.out.println("Result: ");
-
-        for (Student student : students) {
-            if (student.getName().contains(term)) {
-                System.out.println(student);
-            }
+        int i = 0;
+        while( i < 20) {
+            System.out.println( clock );
+            clock.tick();
+            i++;
         }
     }
 }
