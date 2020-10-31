@@ -20,6 +20,16 @@ public class Main {
         for (Student student: students) {
             System.out.println(student);
         }
+
+        System.out.println("Give search term: ");
+        String term = reader.nextLine();
+        System.out.println("Result: ");
+
+        for (Student student : students) {
+            if (student.getName().contains(term)) {
+                System.out.println(student);
+            }
+        }
     }
 }
 
