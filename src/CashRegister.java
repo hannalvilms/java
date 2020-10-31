@@ -70,6 +70,16 @@ public class CashRegister {
         }
     }
 
+    public void loadMoneyToCard(LyyraCard card, double sum) {
+        // When a certain amount is loaded to the card,
+        // the amount stored in the register increases correspondingly.
+        // Remember that the amount to be loaded needs to be positive!
+        if (sum > 0) {
+            card.loadMoney(sum);
+            this.cashInRegister += sum;
+        }
+    }
+
     public String toString() {
         return "money in register "+cashInRegister+" economical lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
     }
