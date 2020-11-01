@@ -5,6 +5,7 @@ public class NightSky {
     private double density;
     private int width;
     private int height;
+    private int starsInLastPrint;
 
     public NightSky(double density, int width, int height) {
         this.density = density;
@@ -28,6 +29,7 @@ public class NightSky {
         for (int i = 0; i < this.width; i++) {
             if (random.nextDouble() <= this.density){
                 System.out.println("*");
+                this.starsInLastPrint++;
             } else {
                 System.out.println(" ");
             }
@@ -36,8 +38,13 @@ public class NightSky {
     }
 
     public void print() {
+        this.starsInLastPrint = 0;
         for (int i = 0; i < this.height; i++) {
             this.printLine();
         }
+    }
+
+    public int starsInLastPrint() {
+        return starsInLastPrint;
     }
 }
