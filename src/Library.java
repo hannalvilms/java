@@ -24,7 +24,9 @@ public class Library {
 
         for (Book book: this.library) {
             if (book.title().contains(title)){
-                found.add(book);
+                if (StringUtils.included(book.title(), title)){
+                    found.add(book);
+                }
             }
         }
 
@@ -35,8 +37,10 @@ public class Library {
         ArrayList<Book> found = new ArrayList<Book>();
 
         for (Book book: this.library) {
-            if (book.publisher().contains(publisher)){
-                found.add(book);
+            if (book.title().contains(publisher)){
+                if (StringUtils.included(book.title(), publisher)){
+                    found.add(book);
+                }
             }
         }
 
