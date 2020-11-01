@@ -3,14 +3,20 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-
-        Person david = new Person("Pekka", 15, 9, 1999);
-        Person jeva = new Person("Steve", 1, 10, 2016);
-
-        System.out.println( david.getName() + " age " + david.age() + " years");
-        System.out.println( jeva.getName() + " age " + jeva.age() + " years");
+        int[] array = {5, 1, 3, 4, 2};
+        printElegantly(array);
     }
+
+   public static void printElegantly(int[] array) {
+       // write code here
+       for(int i = 0; i < array.length; i++){
+           if(i < array.length - 1){
+               System.out.print(array[i] + ", ");
+           } else {
+               System.out.println(array[i]);
+           }
+       }
+   }
 }
 
 
