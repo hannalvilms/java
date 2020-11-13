@@ -1,27 +1,18 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Menu {
+    private ArrayList<Burger> burgers = new ArrayList<>();
 
-    private ArrayList<String> meals;
-
-    public Menu() {
-        this.meals = new ArrayList<String>();
+    public Burger valiBurger(int number) {
+        return burgers.get(number - 1);
     }
 
-    public void addMeal(String meal) {
-        if (!this.meals.contains(meal)) {
-            this.meals.add(meal);
-        }
+    public ArrayList<Burger> burgeriValik() {
+        return this.burgers;
     }
 
-    public void printMeals() {
-        for (String mealS : meals) {
-            System.out.println(mealS);
-        }
+    public void lisaValikusse(Burger burger) {
+        burgers.add(burger);
     }
 
-    public void clearMenu() {
-        this.meals.clear();
-        System.out.println("Menu is empty!");
-    }
 }
