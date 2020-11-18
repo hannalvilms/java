@@ -24,4 +24,16 @@ public class VehicleRegister {
         owners.remove(plate);
         return true;
     }
+
+    public void printRegistrationPlates() {
+        for (RegistrationPlate plate : owners.keySet()) {
+            System.out.println(plate);
+        }
+    }
+    public void printOwners(){
+        Set<String> setOwner = new HashSet<>(owners.values());
+        for (String owner : setOwner) {
+            System.out.println(owner);
+        }
+    }
 }
