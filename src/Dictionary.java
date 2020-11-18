@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Dictionary {
-
+    private String word;
     private HashMap<String, String> translated;
 
     public Dictionary() {
@@ -21,5 +21,13 @@ public class Dictionary {
 
     public int amountOfWords() {
         return this.translated.size();
+    }
+
+    public ArrayList<String> translationList() {
+        ArrayList<String> keySet = new ArrayList<>();
+        for (String key : translated.keySet()) {
+            keySet.add(key + " = " + translated.get(key));
+        }
+        return keySet;
     }
 }
