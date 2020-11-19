@@ -3,13 +3,16 @@ import java.util.*;
 public class Storehouse {
 
     public Map<String, Integer> productPrice;
+    public Map<String, Integer> productStock;
 
     public Storehouse() {
         productPrice = new HashMap<>();
+        productStock = new HashMap<>();
     }
 
     public void addProduct(String product, int price, int stock) {
         productPrice.put(product, price);
+        productPrice.put(product, stock);
     }
 
     public int price(String product) {
@@ -17,6 +20,21 @@ public class Storehouse {
             return productPrice.get(product);
         }
         return -99;
+    }
+
+    public int stock(String product) {
+        if (productStock.containsKey(product)) {
+            return productStock.get(product);
+        }
+        return 0;
+    }
+
+    public boolean take(String product) {
+        if (productStock.containsKey(product) && productStock.get(product) > 0) {
+            productStock.put(product, productStock.get(product)-1);
+            return true;
+        }
+        return false;
     }
 
 }
