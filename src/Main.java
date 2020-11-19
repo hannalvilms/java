@@ -4,29 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RegistrationPlate reg1 = new RegistrationPlate("FI", "ABC-123");
-        RegistrationPlate reg2 = new RegistrationPlate("FI", "UXE-465");
-        RegistrationPlate reg3 = new RegistrationPlate("D", "B WQ-431");
-;
-        ArrayList<RegistrationPlate> finnish = new ArrayList<RegistrationPlate>();
-        finnish.add(reg1);
-        finnish.add(reg2);
+        Book book1 = new Book("Fedor Dostojevski", "Crime and Punishment", 2);
+        Book book2 = new Book("Robert Martin", "Clean Code", 1);
+        Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
 
-        RegistrationPlate first = new RegistrationPlate("FI", "ABC-123");
-        if (!finnish.contains(first)) {
-            finnish.add(first);
-        }
-        System.out.println("Finnish: " + finnish);
-        // if the equals method hasn't been overwritten, the same registration plate is repeated in the list
+        CD cd1 = new CD("Pink Floyd", "Dark Side of the Moon", 1973);
+        CD cd2 = new CD("Wigwam", "Nuclear Nightclub", 1975);
+        CD cd3 = new CD("Rendezvous Park", "Closer to Being Here", 2012);
 
-        HashMap<RegistrationPlate, String> owners = new HashMap<RegistrationPlate, String>();
-        owners.put(reg1, "Arto");
-        owners.put(reg3, "Jürgen");
-
-        System.out.println("owners:");
-        System.out.println(owners.get(new RegistrationPlate("FI", "ABC-123")));
-        System.out.println(owners.get(new RegistrationPlate("D", "B WQ-431")));
-        // if the hashCode hasn't been overwritten, the owners are not found
+        System.out.println(book1);
+        System.out.println(book2);
+        System.out.println(book3);
+        System.out.println(cd1);
+        System.out.println(cd2);
+        System.out.println(cd3);
     }
 }
 

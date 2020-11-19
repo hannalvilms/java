@@ -1,28 +1,20 @@
-public class Book {
+public class Book implements ToBeStored {
 
-    private String title;
-    private String publisher;
-    private int year;
+    public String writer;
+    public String title;
+    public double weight;
 
-    public Book(String title, String publisher, int year) {
+    public Book(String writer, String title, double weight) {
         this.title = title;
-        this.publisher = publisher;
-        this.year = year;
-    }
-
-    public String title() {
-        return this.title;
-    }
-
-    public String publisher() {
-        return this.publisher;
-    }
-
-    public int year() {
-        return this.year;
+        this.writer = writer;
+        this.weight = weight;
     }
 
     public String toString() {
-        return this.title + ", " + this.publisher + ", " + this.year;
+        return this.writer + ": " + this.title;
+    }
+
+    public double weight() {
+        return this.weight;
     }
 }
