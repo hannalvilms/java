@@ -1,5 +1,7 @@
 package people;
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Teacher pekka = new Teacher("Pekka Mikkola", "Korsontie Street 1 03100 Vantaa", 1200);
